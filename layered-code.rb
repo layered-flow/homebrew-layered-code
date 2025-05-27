@@ -5,21 +5,23 @@
 class LayeredCode < Formula
   desc "Homebrew tap for layered-code"
   homepage "https://github.com/layered-flow/layered-code"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
+
+  depends_on "ripgrep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.6/layered-code_Darwin_x86_64.tar.gz"
-      sha256 "f37c2620094dec466a6f176c33dfe3bd8286c3627e98a911ef449d7f2c214c23"
+      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.7/layered-code_Darwin_x86_64.tar.gz"
+      sha256 "ad68193fed41f2ea59e2268e4621bff3259ae3b0aca0886d5fdfc5e4dfe9cd9d"
 
       def install
         bin.install "layered-code"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.6/layered-code_Darwin_arm64.tar.gz"
-      sha256 "13df9cb433323cf77e4ffcbbd6ae6a6101e2d1ff475bb17d5306254f66d8c3d3"
+      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.7/layered-code_Darwin_arm64.tar.gz"
+      sha256 "4681025bd966f7f8ff0f1d7fb4ccc0624a1e4b26f6739dc362e005d7589299b7"
 
       def install
         bin.install "layered-code"
@@ -29,15 +31,15 @@ class LayeredCode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.6/layered-code_Linux_x86_64.tar.gz"
-      sha256 "e116ffe3a77e1adb74bbf7f3714f692977b91b6fdde4c3a187f7ba71026f1f08"
+      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.7/layered-code_Linux_x86_64.tar.gz"
+      sha256 "1fa548d9dd1ed97174cc8fab1765b9181c2fd0c0376296b520f076f574886e5c"
       def install
         bin.install "layered-code"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.6/layered-code_Linux_arm64.tar.gz"
-      sha256 "d9b9c5b7acd871732e88882b2bdffa048b793fdb57723c3a10520f5d5be35225"
+      url "https://github.com/layered-flow/layered-code/releases/download/v0.0.7/layered-code_Linux_arm64.tar.gz"
+      sha256 "efb18e79d0a55de0d8babb7ea9f83a9c69aedde4fbc6ce8bcfb26c29f2f84e74"
       def install
         bin.install "layered-code"
       end
